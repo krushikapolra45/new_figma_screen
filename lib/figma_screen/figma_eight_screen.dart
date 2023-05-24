@@ -120,18 +120,19 @@ class _FigmaEightScreenState extends State<FigmaEightScreen> {
                         color: const Color(0xFFF5F4F8),
                       ),
                       child: Row(
-                        children: const [
-                          SizedBox(
+                        children: [
+                          const SizedBox(
                             width: 20,
                           ),
-                          Text(
+                          const Text(
                             "\$ 180,000",
                             style: TextStyle(color: Color(0xFF252B5C), fontSize: 20),
                           ),
-                          Spacer(),
-                          Text(
-                            "\$",
-                            style: TextStyle(color: Color(0xFF252B5C), fontSize: 20),
+                          const Spacer(),
+                          Image.asset(
+                            "assets/images_eight/dollar_sign.png",
+                            color: const Color(0xFF252B5C),
+                            height: 20,
                           ),
                         ],
                       ),
