@@ -20,6 +20,7 @@ class _FigmaEightScreenState extends State<FigmaEightScreen> {
     return Scaffold(
       body: SafeArea(
         child: ListView(
+          padding: EdgeInsets.all(10),
           children: [
             Column(
               children: [
@@ -260,7 +261,6 @@ class _FigmaEightScreenState extends State<FigmaEightScreen> {
                         TotalRooms(
                           image: "assets/images_eight/sofa.png",
                           title: "6",
-                          color: Color(0xFF252B5C),
                         ),
                         SizedBox(
                           width: 10,
@@ -307,19 +307,21 @@ class _FigmaEightScreenState extends State<FigmaEightScreen> {
                   children: const [
                     Facilities(
                       name: "Garden",
-                      color: Color(0xFF234F68),
+                      color: Color(0xFFF5F4F8),
                     ),
                     SizedBox(
                       width: 10,
                     ),
                     Facilities(
                       name: "Gym",
+                      color: Color(0xFFF5F4F8),
                     ),
                     SizedBox(
                       width: 10,
                     ),
                     Facilities(
                       name: "Park",
+                      color: Color(0xFF234F68),
                     ),
                   ],
                 ),
@@ -337,41 +339,45 @@ class _FigmaEightScreenState extends State<FigmaEightScreen> {
                     ),
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 50, top: 20),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 60,
-                        width: 250,
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF8BC83F),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: const Padding(
-                          padding: EdgeInsets.only(top: 25),
-                          child: Text(
-                            textAlign: TextAlign.center,
-                            " Finish",
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w700,
-                              color: Color(0xFFFFFFFF),
-                            ),
+                SizedBox(
+                  height: 30,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 60,
+                      width: 250,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF8BC83F),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: const Padding(
+                        padding: EdgeInsets.only(top: 18),
+                        child: Text(
+                          textAlign: TextAlign.center,
+                          " Finish",
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w700,
+                            color: Color(0xFFFFFFFF),
                           ),
                         ),
                       ),
-                      Container(
-                        height: 54,
-                        width: 54,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                        child: const Icon(Icons.arrow_forward, color: Color(0xFF252B5C), size: 20),
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 54,
+                      width: 54,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(50),
                       ),
-                    ],
-                  ),
+                      child: const Icon(Icons.arrow_forward, color: Color(0xFF252B5C), size: 20),
+                    ),
+                  ],
                 ),
                 const SizedBox(
                   height: 20,

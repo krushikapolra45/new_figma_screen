@@ -9,18 +9,24 @@ class Environments extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
+        const SizedBox(
+          width: 20,
+        ),
         Container(
           height: 50,
-          width: 94,
+          width: 120,
           decoration: BoxDecoration(
-            color: Color(0xFFF5F4F8),
-            borderRadius: BorderRadius.circular(25),
+            color: const Color(0xFFF5F4F8),
+            borderRadius: BorderRadius.circular(22),
           ),
           child: Padding(
-            padding: const EdgeInsets.only(top: 10),
+            padding: const EdgeInsets.only(top: 14),
             child: Text(
               textAlign: TextAlign.center,
               name ?? "",
+              style: const TextStyle(
+                color: Color(0xFF234F68),
+              ),
             ),
           ),
         ),

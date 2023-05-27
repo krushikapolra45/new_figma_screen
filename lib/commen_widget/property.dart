@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class Property extends StatelessWidget {
   final String? name;
   final String? number;
+
   const Property({
     Key? key,
     this.name,
@@ -61,7 +62,7 @@ class Property extends StatelessWidget {
               borderRadius: BorderRadius.circular(9),
             ),
             child: const Icon(
-              Icons.minimize,
+              Icons.remove,
               size: 20,
               color: Colors.white,
             ),
