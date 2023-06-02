@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../commen_widget/environment.dart';
-import '../commen_widget/environments.dart';
-import '../commen_widget/facilities.dart';
-import '../commen_widget/price.dart';
-import '../commen_widget/property.dart';
-import '../commen_widget/total_rooms.dart';
+import '../common_widget/environment.dart';
+import '../common_widget/environments.dart';
+import '../common_widget/facilities.dart';
+import '../common_widget/price.dart';
+import '../common_widget/property.dart';
+import '../common_widget/total_rooms.dart';
 
 class FigmaEightScreen extends StatefulWidget {
   const FigmaEightScreen({Key? key}) : super(key: key);

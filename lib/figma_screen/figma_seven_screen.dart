@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../commen_widget/food_logo.dart';
-import '../commen_widget/food_pizza.dart';
-import '../commen_widget/food_tile.dart';
+import '../common_widget/food_logo.dart';
+import '../common_widget/food_pizza.dart';
+import '../common_widget/food_tile.dart';
 
 class FigmaSevenScreen extends StatefulWidget {
   const FigmaSevenScreen({Key? key}) : super(key: key);

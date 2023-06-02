@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'figma_screen/figma_eight_screen.dart';
+import 'figma_screen/figma_nineth_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,9 +16,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: "Inter",
       ),
       debugShowCheckedModeBanner: false,
-      home: const FigmaEightScreen(),
+      home: const FigmaNinethScreen(),
     );
   }
 }
