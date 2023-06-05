@@ -304,6 +304,9 @@ class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
                   "Partners",
                   style: TextStyle(color: Color(0xFF667085), fontSize: 15),
                 ),
+
+//
+//
                 const Text(
                   "Careers",
                   style: TextStyle(color: Color(0xFF667085), fontSize: 15),
