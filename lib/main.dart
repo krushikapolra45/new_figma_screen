@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'figma_screen/figma_nineth_screen.dart';
+import 'figma_screen/figma_tenth_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Inter",
       ),
       debugShowCheckedModeBanner: false,
-      home: const FigmaNinethScreen(),
+      home: const FigmaTenthScreen(),
     );
   }
 }

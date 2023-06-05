@@ -70,6 +70,7 @@ flutter:
     - assets/images_eight/
     - assets/fonts/
     - assets/images_nine/
+    - assets/images_ten/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -86,11 +87,11 @@ flutter:
   fonts:
     - family: Inter
       fonts:
-        - asset: assets/fonts/Inter-Bold.ttf
+#        - asset: assets/fonts/Inter-Bold.ttf
 #    asset: assets/fonts/Inter-Black.ttf
 #    asset: assets/fonts/Inter-ExtraBold.ttf
 #    asset: assets/fonts/Inter-ExtraLight.ttf
 #    asset: assets/fonts/Inter-Medium.ttf
-#    asset: assets/fonts/Inter-Regular.ttf
+        - asset: assets/fonts/Inter-Regular.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

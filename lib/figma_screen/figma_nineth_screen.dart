@@ -127,7 +127,7 @@ class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
                 fontSize: 28,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             ListView.separated(
@@ -263,6 +263,50 @@ class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
                     fontSize: 15,
                     color: Color(0xFF667085),
                   ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Row(
+                  children: [
+                    Text(
+                      "Company",
+                      style: TextStyle(color: Color(0xFF98A2B3), fontSize: 15),
+                    ),
+                    Spacer(),
+                    Text(
+                      "Services",
+                      style: TextStyle(color: Color(0xFF98A2B3), fontSize: 15),
+                    ),
+                  ],
+                ),
+                const Text(
+                  "Training",
+                  style: TextStyle(color: Color(0xFF667085), fontSize: 15),
+                ),
+                const Text(
+                  "News & Articles",
+                  style: TextStyle(color: Color(0xFF667085), fontSize: 15),
+                ),
+                const Text(
+                  "Success Stories",
+                  style: TextStyle(color: Color(0xFF667085), fontSize: 15),
+                ),
+                const Text(
+                  "About us",
+                  style: TextStyle(color: Color(0xFF667085), fontSize: 15),
+                ),
+                const Text(
+                  "Leadership Team",
+                  style: TextStyle(color: Color(0xFF667085), fontSize: 15),
+                ),
+                const Text(
+                  "Partners",
+                  style: TextStyle(color: Color(0xFF667085), fontSize: 15),
+                ),
+                const Text(
+                  "Careers",
+                  style: TextStyle(color: Color(0xFF667085), fontSize: 15),
                 ),
               ],
             ),
