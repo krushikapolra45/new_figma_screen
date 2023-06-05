@@ -8,16 +8,16 @@ class FigmaNinethScreen extends StatefulWidget {
 }
 
 class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
-  List<Color> colorList = [
-    Colors.white,
-    Colors.white,
-    Colors.white,
-    Colors.white,
-    Colors.white,
-    Colors.white,
-    Colors.white,
-    Colors.white,
-  ];
+  // List<Color> colorList = [
+  //   Colors.white,
+  //   Colors.white,
+  //   Colors.white,
+  //   Colors.white,
+  //   Colors.white,
+  //   Colors.white,
+  //   Colors.white,
+  //   Colors.white,
+  // ];
   Map mapdata = {
     "color": Colors.white,
     "title": "",
@@ -27,59 +27,51 @@ class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
   List<Map<String, dynamic>> colortextList = [
     {
       "color": Colors.white,
-      "text": "gray color",
       "title": "National Statistics Center Obtain a certificate of ISO 9001 and \n certificate of ISO 10015.",
       "image": "assets/images_nine/images_first.png",
-      "date": "October 2022",
+      "date": "january 2022",
     },
     {
       "color": Colors.white,
-      "text": "gray color",
       "title": "National Statistics Center Obtain a certificate of ISO 9001 and \ncertificate of ISO 10015.",
-      "image": "assets/images_nine/images_first.png",
+      "image": "assets/images_nine/Image_two.png",
       "date": "October 2022",
     },
     {
       "color": Colors.white,
-      "text": "gray color",
       "title": "Institutional development in the Ministry of education and higher education.",
-      "image": "assets/images_nine/images_first.png",
-      "date": "October 2022",
+      "image": "assets/images_nine/Image_three.png",
+      "date": "september 2022",
     },
     {
       "color": Colors.white,
-      "text": "gray color",
-      "title": "Completion of Strategic Development Planning Project                               Egypt - Cairo.",                              Egypt - Cairo.,
-      "image": "assets/images_nine/images_first.png",
-      "date": "October 2022",
+      "title": "Completion of Strategic Development Planning Project                \n               Egypt - Cairo.",
+      "image": "assets/images_nine/Image_four.png",
+      "date": "may 2022",
     },
     {
       "color": Colors.white,
-      "text": "gray color",
-      "title": "Completion of Strategic Development Planning and Physical Planning for Ithad Municipality",
-      "image": "assets/images_nine/images_first.png",
-      "date": "October 2022",
+      "title": "Completion of Strategic Development Planning and\n Physical Planning for Ithad Municipality",
+      "image": "assets/images_nine/Image_five.png",
+      "date": "April 2022",
     },
     {
       "color": Colors.white,
-      "text": "gray color",
-      "title": "National Statistics Center Obtain a certificate of ISO 9001 and \n certificate of ISO 10015.",
-      "image": "assets/images_nine/images_first.png",
-      "date": "October 2022",
+      "title": "Institutional development in the Ministry of\n education and higher education.",
+      "image": "assets/images_nine/Image_six.png",
+      "date": "january 2022",
     },
     {
       "color": Colors.white,
-      "text": "gray color",
-      "title": "National Statistics Center Obtain a certificate of ISO 9001 and \n certificate of ISO 10015.",
-      "image": "assets/images_nine/images_first.png",
-      "date": "October 2022",
+      "title": "Service Decentralization at the Ministry of National Economy   \n   Alexandria - Egypt.",
+      "image": "assets/images_nine/Image_seven.png",
+      "date": "December 2021",
     },
     {
       "color": Colors.white,
-      "text": "gray color",
-      "title": "National Statistics Center Obtain a certificate of ISO 9001 and \n certificate of ISO 10015.",
-      "image": "assets/images_nine/images_first.png",
-      "date": "October 2022",
+      "title": "Analysis of security vulnerabilities in computerized system in \nthe financial market.",
+      "image": "assets/images_nine/Image_eight.png",
+      "date": "November 2021",
     },
   ];
 
@@ -87,84 +79,192 @@ class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
+        child: ListView(
+          padding: EdgeInsets.zero,
           children: [
             Container(
               height: 72,
               width: double.infinity,
               color: const Color(0xFFF4F3FE),
-              child: Row(
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.all(8),
-                  ),
-                  Image.asset(
-                    "assets/images_nine/ractengle.png",
-                    alignment: Alignment.topLeft,
-                    height: 44,
-                    width: 44,
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  const Text(
-                    "Evolve",
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Color(0xFF101828),
-                      fontWeight: FontWeight.bold,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 15),
+                child: Row(
+                  children: [
+                    Image.asset(
+                      "assets/images_nine/ractengle.png",
+                      alignment: Alignment.topLeft,
+                      height: 44,
+                      width: 44,
                     ),
-                  ),
-                  const Spacer(),
-                  Image.asset(
-                    "assets/images_nine/_Nav menu button.png",
-                    height: 40,
-                    width: 40,
-                  ),
-                ],
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    const Text(
+                      "Evolve",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Color(0xFF101828),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const Spacer(),
+                    Image.asset(
+                      "assets/images_nine/_Nav menu button.png",
+                      height: 40,
+                      width: 40,
+                    ),
+                  ],
+                ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Text(
+            const Text(
+              textAlign: TextAlign.center,
               "Success Stories",
               style: TextStyle(
                 fontSize: 28,
               ),
             ),
-            Expanded(
-              child: Padding(
-                padding: EdgeInsets.all(15),
-                child: ListView.separated(
-                  itemCount: colortextList.length,
-                  itemBuilder: (context, index) => Container(
-                    width: 343,
-                    height: 260,
-                    color: colortextList[index]["color"],
-                    alignment: Alignment.topCenter,
-                    child: Column(
-                      children: [
-                        Image.asset(
+            SizedBox(
+              height: 10,
+            ),
+            ListView.separated(
+              physics: const NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: colortextList.length,
+              itemBuilder: (context, index) => Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20),
+                child: Container(
+                  width: 343,
+                  height: 260,
+                  color: colortextList[index]["color"],
+                  alignment: Alignment.topCenter,
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Image.asset(
                           colortextList[index]["image"],
                           width: 319,
                           height: 148,
                         ),
-                        SizedBox(
-                          height: 5,
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      Text(
+                        colortextList[index]["title"],
+                        style: const TextStyle(fontSize: 10),
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Text(
+                        colortextList[index]["date"],
+                        style: const TextStyle(
+                          fontSize: 15,
+                          color: Color(0xFF667085),
                         ),
-                        Text(
-                          colortextList[index]["title"],
-                          style: TextStyle(fontSize: 10),
-                        ),
-                      ],
-                    ),
-                  ),
-                  separatorBuilder: (context, index) => SizedBox(
-                    height: 50,
+                      ),
+                    ],
                   ),
                 ),
               ),
+              separatorBuilder: (context, index) => const SizedBox(
+                height: 30,
+              ),
+            ),
+            Container(
+              height: 320,
+              width: double.infinity,
+              padding: const EdgeInsets.only(top: 30),
+              color: const Color(0xFF6B58F1),
+              child: Column(
+                children: [
+                  const Text(
+                    textAlign: TextAlign.center,
+                    "Join over 100+ startups \nalready growing with\nEvolve.",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Text(
+                    textAlign: TextAlign.center,
+                    "You are definitely among competitors and\nyou must come out on top but it depends on\nyour willpower.",
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.white,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Container(
+                    width: 343,
+                    height: 50,
+                    padding: const EdgeInsets.only(top: 14),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.white,
+                    ),
+                    child: const Text(
+                      "Request a demo",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Image.asset(
+                      "assets/images_nine/ractengle.png",
+                      alignment: Alignment.topLeft,
+                      height: 44,
+                      width: 44,
+                    ),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    const Text(
+                      "Evolve",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Color(0xFF101828),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                const Text(
+                  "For Administrative development\nand project management.",
+                  style: TextStyle(
+                    fontSize: 15,
+                    color: Color(0xFF667085),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
