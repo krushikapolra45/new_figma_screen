@@ -8,63 +8,80 @@ class FigmaTenthScreen extends StatefulWidget {
 }
 
 class _FigmaTenthScreenState extends State<FigmaTenthScreen> {
-  List<Color> semList = [
-    const Color(0xFFF4F5F7),
-  ];
   Map mapsame = {
     "color": const Color(0xFFF4F5F7),
     "text": "black color",
   };
-  List<Map<String, dynamic>> Arrcolor = [
+  List<Map<String, dynamic>> arrayList = [
     {
       "color": const Color(0xFFF4F5F7),
-      "itemname": "M1 Macbook Pro 2020",
+      "itemname": "M1 Macbook Pro\n2020",
       "image": "assets/images_ten/image main_leptop.png",
+      "icon": Icons.favorite,
+      "price": "USD 1,199.00",
     },
     {
       "color": const Color(0xFFF4F5F7),
-      // "itemname": "Sanchos Office Desk..",
-      // "image": "assets/images_ten/woodtable.png",
+      "itemname": "Sanchos Office\nDesk..",
+      "image": "assets/images_ten/woodtable.png",
+      "icon": Icons.shopping_cart,
+      "price": "USD 71.12",
     },
     {
       "color": const Color(0xFFF4F5F7),
-      // "itemname": "Puton Coffee Maker, Auto ...",
-      // "image": "assets/images_ten/image juicer.png",
+      "itemname": "Puton Coffee\nMaker, Auto ...",
+      "image": "assets/images_ten/image juicer.png",
+      "icon": Icons.shopping_cart,
+      "price": "USD 83.00",
     },
     {
       "color": const Color(0xFFF4F5F7),
-      // "itemname": "Adjustable Office Chair",
-      // "image": "assets/images_ten/image chair.png",
+      "itemname": "Adjustable\nOffice Chair",
+      "image": "assets/images_ten/image chair.png",
+      "icon": Icons.favorite,
+      "price": "USD 64.00",
     },
     {
       "color": const Color(0xFFF4F5F7),
-      // "itemname": "2.4G Optical Wireless Mouse",
-      // "image": "assets/images_ten/image mouse.png",
+      "itemname": "2.4G Optical\nWireless Mouse",
+      "image": "assets/images_ten/image mouse.png",
+      "icon": Icons.favorite,
+      "price": "USD 23.00",
     },
     {
       "color": const Color(0xFFF4F5F7),
-      // "itemname": "Jarvis Hardwood Standing Desk",
-      // "image": "assets/images_ten/image table.png",
+      "itemname": "Jarvis Hardwood\nStanding Desk",
+      "image": "assets/images_ten/image table.png",
+      "icon": Icons.favorite,
+      "price": "USD 1,399.00",
     },
     {
       "color": const Color(0xFFF4F5F7),
-      // "itemname": "Boat Airpods 203 - Wireless",
-      // "image": "assets/images_ten/image airpods.png",
+      "itemname": "Boat Airpods\n203 - Wireless",
+      "image": "assets/images_ten/image airpods.png",
+      "icon": Icons.favorite,
+      "price": "USD 79.00",
     },
     {
       "color": const Color(0xFFF4F5F7),
-      // "itemname": "Logitech Folio Touch",
-      // "image": "assets/images_ten/image leptop.png",
+      "itemname": "Logitech Folio\nTouch",
+      "image": "assets/images_ten/image leptop.png",
+      "icon": Icons.favorite,
+      "price": "USD 329.00",
     },
     {
       "color": const Color(0xFFF4F5F7),
-      // "itemname": "Black Slot 5 Shelf Unit",
-      // "image": "assets/images_ten/image stand.png",
+      "itemname": "Black Slot 5 Shelf\nUnit",
+      "image": "assets/images_ten/image stand.png",
+      "icon": Icons.favorite,
+      "price": "USD 61.00",
     },
     {
       "color": const Color(0xFFF4F5F7),
-      // "itemname": "Portable Bluetooth Spea..",
-      // "image": "assets/images_ten/image bluetooth.png",
+      "itemname": "Portable \nBluetooth Spea..",
+      "image": "assets/images_ten/image bluetooth.png",
+      "icon": Icons.favorite,
+      "price": "USD 36.99",
     },
   ];
 
@@ -98,12 +115,12 @@ class _FigmaTenthScreenState extends State<FigmaTenthScreen> {
                   Container(
                     height: 34,
                     width: 84,
-                    // padding: EdgeInsets.only(top: 7),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
                       color: const Color(0xFFF7ECE8),
                     ),
-                    child: Text(
+                    alignment: Alignment.center,
+                    child: const Text(
                       "Suggest +",
                       style: TextStyle(
                         fontFamily: "Avenir",
@@ -112,7 +129,6 @@ class _FigmaTenthScreenState extends State<FigmaTenthScreen> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    alignment: Alignment.center,
                   ),
                 ],
               ),
@@ -122,7 +138,7 @@ class _FigmaTenthScreenState extends State<FigmaTenthScreen> {
                   fontSize: 15,
                   fontFamily: "Avenir",
                   color: Color(0xFF8A8B7A),
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
               const SizedBox(
@@ -165,24 +181,113 @@ class _FigmaTenthScreenState extends State<FigmaTenthScreen> {
                 children: [
                   Text(
                     "SUGGESTED ITEMS",
-                    style: TextStyle(
-                      color: Color(0xFF8A8B7A),
-                      fontSize: 20,
-                      fontFamily: "Avenir",
-                    ),
+                    style: TextStyle(color: Color(0xFF8A8B7A), fontSize: 18, fontFamily: "Avenir", fontWeight: FontWeight.w600,),
                   ),
                 ],
               ),
+              const SizedBox(
+                height: 20,
+              ),
               Expanded(
-                child: GridView.count(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 11,
-                  children: [
-                    Container(
-                      height: 188,
-                      width: 178,
+                child: GridView.builder(
+                  itemCount: arrayList.length,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 25,
+                    crossAxisSpacing: 20,
+                    mainAxisExtent: 210,
+                  ),
+                  itemBuilder: (context, index) => Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: arrayList[index]["color"],
                     ),
-                  ],
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Stack(
+                        children: [
+                          Image.asset(
+                            arrayList[index]["image"],
+                          ),
+                          Align(
+                            alignment: Alignment.topRight,
+                            child: Container(
+                              width: 32,
+                              height: 32,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: Colors.white,
+                              ),
+                              child: Icon(
+                                arrayList[index]["icon"],
+                                color: const Color(0xFFCED55B),
+                                size: 18,
+                              ),
+                            ),
+                          ),
+                          Align(
+                            alignment: Alignment.bottomCenter,
+                            child: Container(
+                              width: 160,
+                              height: 95,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: Colors.white,
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      arrayList[index]["itemname"],
+                                      style: const TextStyle(
+                                        color: Color(0xFF040B14),
+                                        fontSize: 16,
+                                        fontFamily: "Avenir",
+                                        fontWeight: FontWeight.w400,
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 2,
+                                    ),
+                                    Text(
+                                      arrayList[index]["price"],
+                                      style: const TextStyle(
+                                        color: Color(0xFFBA5C3D),
+                                        fontSize: 16,
+                                        fontFamily: "Avenir",
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                    ),
+                                    const Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        Text(
+                                          "4.2",
+                                          style: TextStyle(
+                                            color: Color(0xFF8A8B7A),
+                                            fontSize: 16,
+                                            fontFamily: "Avenir",
+                                            fontWeight: FontWeight.w400,
+                                          ),
+                                        ),
+                                        Icon(Icons.star,
+                                            color: Color(
+                                              0xFFF2C94C,
+                                            ),
+                                            size: 15),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ],

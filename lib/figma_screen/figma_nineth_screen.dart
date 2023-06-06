@@ -8,16 +8,6 @@ class FigmaNinethScreen extends StatefulWidget {
 }
 
 class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
-  // List<Color> colorList = [
-  //   Colors.white,
-  //   Colors.white,
-  //   Colors.white,
-  //   Colors.white,
-  //   Colors.white,
-  //   Colors.white,
-  //   Colors.white,
-  //   Colors.white,
-  // ];
   Map mapdata = {
     "color": Colors.white,
     "title": "",
@@ -101,11 +91,7 @@ class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
                     ),
                     const Text(
                       "Evolve",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Color(0xFF101828),
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: TextStyle(fontSize: 20, color: Color(0xFF101828), fontWeight: FontWeight.bold, fontFamily: "Inter"),
                     ),
                     const Spacer(),
                     Image.asset(
@@ -123,9 +109,7 @@ class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
             const Text(
               textAlign: TextAlign.center,
               "Success Stories",
-              style: TextStyle(
-                fontSize: 28,
-              ),
+              style: TextStyle(fontSize: 28, fontFamily: "Inter"),
             ),
             const SizedBox(
               height: 10,
@@ -156,7 +140,10 @@ class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
                       ),
                       Text(
                         colortextList[index]["title"],
-                        style: const TextStyle(fontSize: 10),
+                        style: const TextStyle(
+                          fontSize: 10,
+                          fontFamily: "Inter",
+                        ),
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(
@@ -166,6 +153,7 @@ class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
                         colortextList[index]["date"],
                         style: const TextStyle(
                           fontSize: 15,
+                          fontFamily: "Inter",
                           color: Color(0xFF667085),
                         ),
                       ),
@@ -189,6 +177,7 @@ class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
                     "Join over 100+ startups \nalready growing with\nEvolve.",
                     style: TextStyle(
                       color: Colors.white,
+                      fontFamily: "Inter",
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
                     ),
@@ -201,6 +190,7 @@ class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
                     "You are definitely among competitors and\nyou must come out on top but it depends on\nyour willpower.",
                     style: TextStyle(
                       fontSize: 15,
+                      fontFamily: "Inter",
                       color: Colors.white,
                     ),
                   ),
@@ -219,6 +209,7 @@ class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
                       "Request a demo",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
+                        fontFamily: "Inter",
                         fontSize: 18,
                       ),
                       textAlign: TextAlign.center,
@@ -230,89 +221,192 @@ class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
             const SizedBox(
               height: 40,
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Image.asset(
-                      "assets/images_nine/ractengle.png",
-                      alignment: Alignment.topLeft,
-                      height: 44,
-                      width: 44,
-                    ),
-                    const SizedBox(
-                      width: 20,
-                    ),
-                    const Text(
-                      "Evolve",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Color(0xFF101828),
-                        fontWeight: FontWeight.bold,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Image.asset(
+                        "assets/images_nine/ractengle.png",
+                        alignment: Alignment.topLeft,
+                        height: 44,
+                        width: 44,
                       ),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 40,
-                ),
-                const Text(
-                  "For Administrative development\nand project management.",
-                  style: TextStyle(
-                    fontSize: 15,
-                    color: Color(0xFF667085),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      const Text(
+                        "Evolve",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Color(0xFF101828),
+                          fontWeight: FontWeight.bold,
+                          fontFamily: "Inter",
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const Row(
-                  children: [
-                    Text(
-                      "Company",
-                      style: TextStyle(color: Color(0xFF98A2B3), fontSize: 15),
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  const Text(
+                    "For Administrative development\nand project management.",
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontFamily: "Inter",
+                      color: Color(0xFF667085),
                     ),
-                    Spacer(),
-                    Text(
-                      "Services",
-                      style: TextStyle(color: Color(0xFF98A2B3), fontSize: 15),
-                    ),
-                  ],
-                ),
-                const Text(
-                  "Training",
-                  style: TextStyle(color: Color(0xFF667085), fontSize: 15),
-                ),
-                const Text(
-                  "News & Articles",
-                  style: TextStyle(color: Color(0xFF667085), fontSize: 15),
-                ),
-                const Text(
-                  "Success Stories",
-                  style: TextStyle(color: Color(0xFF667085), fontSize: 15),
-                ),
-                const Text(
-                  "About us",
-                  style: TextStyle(color: Color(0xFF667085), fontSize: 15),
-                ),
-                const Text(
-                  "Leadership Team",
-                  style: TextStyle(color: Color(0xFF667085), fontSize: 15),
-                ),
-                const Text(
-                  "Partners",
-                  style: TextStyle(color: Color(0xFF667085), fontSize: 15),
-                ),
-
-//
-//
-
-                const Text(
-                  "Careers",
-                  style: TextStyle(color: Color(0xFF667085), fontSize: 15),
-                ),
-              ],
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Company",
+                            style: TextStyle(
+                              color: Color(0xFF98A2B3),
+                              fontSize: 15,
+                              fontFamily: "Inter",
+                            ),
+                          ),
+                          Text(
+                            "Training",
+                            style: TextStyle(
+                              color: Color(0xFF667085),
+                              fontSize: 15,
+                              fontFamily: "Inter",
+                            ),
+                          ),
+                          Text(
+                            "News & Articles",
+                            style: TextStyle(
+                              color: Color(0xFF667085),
+                              fontSize: 15,
+                              fontFamily: "Inter",
+                            ),
+                          ),
+                          Text(
+                            "Success Stories",
+                            style: TextStyle(
+                              color: Color(0xFF667085),
+                              fontSize: 15,
+                              fontFamily: "Inter",
+                            ),
+                          ),
+                          Text(
+                            "About us",
+                            style: TextStyle(
+                              color: Color(0xFF667085),
+                              fontSize: 15,
+                              fontFamily: "Inter",
+                            ),
+                          ),
+                          Text(
+                            "Leadership Team",
+                            style: TextStyle(
+                              color: Color(0xFF667085),
+                              fontSize: 15,
+                              fontFamily: "Inter",
+                            ),
+                          ),
+                          Text(
+                            "Partners",
+                            style: TextStyle(
+                              color: Color(0xFF667085),
+                              fontSize: 15,
+                              fontFamily: "Inter",
+                            ),
+                          ),
+                          Text(
+                            "Careers",
+                            style: TextStyle(
+                              color: Color(0xFF667085),
+                              fontSize: 15,
+                              fontFamily: "Inter",
+                            ),
+                          ),
+                        ],
+                      ),
+                      Spacer(),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Services",
+                            style: TextStyle(
+                              color: Color(0xFF98A2B3),
+                              fontSize: 15,
+                              fontFamily: "Inter",
+                            ),
+                          ),
+                          Text(
+                            "Training",
+                            style: TextStyle(
+                              color: Color(0xFF667085),
+                              fontSize: 15,
+                              fontFamily: "Inter",
+                            ),
+                          ),
+                          Text(
+                            "News & Articles",
+                            style: TextStyle(
+                              color: Color(0xFF667085),
+                              fontSize: 15,
+                              fontFamily: "Inter",
+                            ),
+                          ),
+                          Text(
+                            "Success Stories",
+                            style: TextStyle(
+                              color: Color(0xFF667085),
+                              fontSize: 15,
+                              fontFamily: "Inter",
+                            ),
+                          ),
+                          Text(
+                            "About us",
+                            style: TextStyle(
+                              color: Color(0xFF667085),
+                              fontSize: 15,
+                              fontFamily: "Inter",
+                            ),
+                          ),
+                          Text(
+                            "Leadership Team",
+                            style: TextStyle(
+                              color: Color(0xFF667085),
+                              fontSize: 15,
+                              fontFamily: "Inter",
+                            ),
+                          ),
+                          Text(
+                            "Partners",
+                            style: TextStyle(
+                              color: Color(0xFF667085),
+                              fontSize: 15,
+                              fontFamily: "Inter",
+                            ),
+                          ),
+                          Text(
+                            "Careers",
+                            style: TextStyle(
+                              color: Color(0xFF667085),
+                              fontSize: 15,
+                              fontFamily: "Inter",
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),
