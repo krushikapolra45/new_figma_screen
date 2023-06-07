@@ -12,7 +12,7 @@ class _FigmaFourthScreenState extends State<FigmaFourthScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xfff192396),
+        backgroundColor: const Color(0xff192396),
         elevation: 0,
         leading: const Icon(
           Icons.arrow_back_ios,
@@ -30,7 +30,7 @@ class _FigmaFourthScreenState extends State<FigmaFourthScreen> {
             height: 180,
             width: 422,
             decoration: const BoxDecoration(
-              color: Color(0xfff192396),
+              color: Color(0xff192396),
               borderRadius: BorderRadius.only(bottomRight: Radius.circular(50)),
             ),
             padding: const EdgeInsets.all(10),
@@ -339,7 +339,7 @@ class _FigmaFourthScreenState extends State<FigmaFourthScreen> {
                 const SizedBox(
                   height: 10,
                 ),
-                Column(
+                const Column(
                   children: [],
                 ),
                 const Text(

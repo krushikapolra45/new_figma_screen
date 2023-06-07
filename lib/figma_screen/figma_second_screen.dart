@@ -39,7 +39,7 @@ class _FigmaSecondScreenState extends State<FigmaSecondScreen> {
                     ),
                   ),
                   const SizedBox(width: 40),
-                  Text(
+                  const Text(
                     "History",
                     style: TextStyle(
                       fontSize: 22,
@@ -52,8 +52,8 @@ class _FigmaSecondScreenState extends State<FigmaSecondScreen> {
               padding: const EdgeInsets.all(15),
               child: Column(
                 children: [
-                  Row(
-                    children: const [
+                  const Row(
+                    children: [
                       Text(
                         "date",
                         textAlign: TextAlign.start,
@@ -61,7 +61,7 @@ class _FigmaSecondScreenState extends State<FigmaSecondScreen> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
@@ -81,7 +81,7 @@ class _FigmaSecondScreenState extends State<FigmaSecondScreen> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
@@ -89,14 +89,14 @@ class _FigmaSecondScreenState extends State<FigmaSecondScreen> {
                       Container(
                         width: 125,
                         height: 50,
-                        padding: EdgeInsets.all(5),
+                        padding: const EdgeInsets.all(5),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           color: const Color(0xff5164BF),
                         ),
-                        child: Column(
+                        child: const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
+                          children: [
                             Text(
                               "transaction",
                               textAlign: TextAlign.center,
@@ -116,20 +116,20 @@ class _FigmaSecondScreenState extends State<FigmaSecondScreen> {
                           ],
                         ),
                       ),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       Row(
                         children: [
                           Container(
                             width: 90,
                             height: 50,
-                            padding: EdgeInsets.all(5),
+                            padding: const EdgeInsets.all(5),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               color: const Color(0xff8EDFEB),
                             ),
-                            child: Column(
+                            child: const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
+                              children: [
                                 Text(
                                   "tickets",
                                   textAlign: TextAlign.center,
@@ -153,11 +153,11 @@ class _FigmaSecondScreenState extends State<FigmaSecondScreen> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Row(
-                    children: const [
+                  const Row(
+                    children: [
                       Text(
                         "today",
                         style: TextStyle(
@@ -199,9 +199,9 @@ class _FigmaSecondScreenState extends State<FigmaSecondScreen> {
                             const SizedBox(
                               width: 10,
                             ),
-                            Column(
+                            const Column(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: const [
+                              children: [
                                 Text(
                                   "shopping",
                                   style: TextStyle(
@@ -270,9 +270,9 @@ class _FigmaSecondScreenState extends State<FigmaSecondScreen> {
                             const SizedBox(
                               width: 10,
                             ),
-                            Column(
+                            const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
+                              children: [
                                 Text(
                                   "Food delivery",
                                   style: TextStyle(
@@ -329,9 +329,9 @@ class _FigmaSecondScreenState extends State<FigmaSecondScreen> {
                               height: 57,
                             ),
                             const SizedBox(width: 10),
-                            Column(
+                            const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
+                              children: [
                                 Text(
                                   "Sarah",
                                   style: TextStyle(
@@ -400,9 +400,9 @@ class _FigmaSecondScreenState extends State<FigmaSecondScreen> {
                             const SizedBox(
                               width: 10,
                             ),
-                            Column(
+                            const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
+                              children: [
                                 Text(
                                   "shopping",
                                   style: TextStyle(
@@ -471,9 +471,9 @@ class _FigmaSecondScreenState extends State<FigmaSecondScreen> {
                             const SizedBox(
                               width: 10,
                             ),
-                            Column(
+                            const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
+                              children: [
                                 Text(
                                   "Food delivery",
                                   style: TextStyle(
