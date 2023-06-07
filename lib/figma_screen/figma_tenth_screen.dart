@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
 class FigmaTenthScreen extends StatefulWidget {
-  const FigmaTenthScreen({Key? key}) : super(key: key);
+  final TextEditingController? textcontroller;
+  const FigmaTenthScreen({
+    Key? key,
+    this.textcontroller,
+  }) : super(key: key);
 
   @override
   State<FigmaTenthScreen> createState() => _FigmaTenthScreenState();
 }
 
 class _FigmaTenthScreenState extends State<FigmaTenthScreen> {
-  Map mapsame = {
-    "color": const Color(0xFFF4F5F7),
-    "text": "black color",
-  };
   List<Map<String, dynamic>> arrayList = [
     {
       "color": const Color(0xFFF4F5F7),
@@ -141,47 +141,43 @@ class _FigmaTenthScreenState extends State<FigmaTenthScreen> {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 20,
               ),
-              Container(
-                width: 366,
-                height: 50,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: const Color(0xFFC9CEDA), width: 2),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    const Text(
-                      "What are you looking for?",
-                      style: TextStyle(
-                        fontFamily: "Avenir",
-                        color: Color(0xFF888C93),
-                        fontSize: 15,
-                      ),
+              TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(11),
+                    borderSide: BorderSide(
+                      color: Color(0xFFC9CEDA),
+                      width: 2,
                     ),
-                    const SizedBox(
-                      width: 50,
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(11),
+                    borderSide: BorderSide(
+                      color: Color(0xFFC9CEDA),
+                      width: 2,
                     ),
-                    Image.asset(
-                      "assets/images_ten/filter.png",
-                      width: 20,
-                      height: 20,
-                      color: const Color(0xFF040B14),
-                    ),
-                  ],
+                  ),
+                  suffixText: "What are you looking for?",
+
+                  // suffixIcon:IconButton(icon: Icon(Icons.filter),)
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 30,
               ),
               const Row(
                 children: [
                   Text(
                     "SUGGESTED ITEMS",
-                    style: TextStyle(color: Color(0xFF8A8B7A), fontSize: 18, fontFamily: "Avenir", fontWeight: FontWeight.w600,),
+                    style: TextStyle(
+                      color: Color(0xFF8A8B7A),
+                      fontSize: 18,
+                      fontFamily: "Avenir",
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ],
               ),
