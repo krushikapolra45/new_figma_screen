@@ -141,21 +141,21 @@ class _FigmaTenthScreenState extends State<FigmaTenthScreen> {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(11),
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Color(0xFFC9CEDA),
                       width: 2,
                     ),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(11),
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Color(0xFFC9CEDA),
                       width: 2,
                     ),
@@ -165,7 +165,7 @@ class _FigmaTenthScreenState extends State<FigmaTenthScreen> {
                   // suffixIcon:IconButton(icon: Icon(Icons.filter),)
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               const Row(
