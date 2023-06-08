@@ -20,7 +20,7 @@ class _FigmaEightScreenState extends State<FigmaEightScreen> {
     return Scaffold(
       body: SafeArea(
         child: ListView(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           children: [
             Column(
               children: [
@@ -105,9 +105,9 @@ class _FigmaEightScreenState extends State<FigmaEightScreen> {
                 const SizedBox(
                   height: 10,
                 ),
-                Column(
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Text(
                       "Sell Price",
                       style: TextStyle(
@@ -184,10 +184,10 @@ class _FigmaEightScreenState extends State<FigmaEightScreen> {
                     ),
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(20),
+                const Padding(
+                  padding: EdgeInsets.all(20),
                   child: Row(
-                    children: const [
+                    children: [
                       Text(
                         "Property Features",
                         style: TextStyle(
@@ -199,9 +199,9 @@ class _FigmaEightScreenState extends State<FigmaEightScreen> {
                     ],
                   ),
                 ),
-                Column(
+                const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     Property(
                       name: "bedroom",
                       number: "3",
@@ -223,10 +223,10 @@ class _FigmaEightScreenState extends State<FigmaEightScreen> {
                   ],
                 ),
                 const SizedBox(height: 20),
-                Padding(
-                  padding: const EdgeInsets.all(20),
+                const Padding(
+                  padding: EdgeInsets.all(20),
                   child: Row(
-                    children: const [
+                    children: [
                       Text(
                         "Total Rooms",
                         style: TextStyle(
@@ -238,12 +238,12 @@ class _FigmaEightScreenState extends State<FigmaEightScreen> {
                     ],
                   ),
                 ),
-                SingleChildScrollView(
+                const SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 20),
+                    padding: EdgeInsets.only(left: 20),
                     child: Row(
-                      children: const [
+                      children: [
                         TotalRooms(
                           image: "assets/images_eight/sofa.png",
                           title: "< 4",
@@ -273,10 +273,10 @@ class _FigmaEightScreenState extends State<FigmaEightScreen> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(20),
+                const Padding(
+                  padding: EdgeInsets.all(20),
                   child: Row(
-                    children: const [
+                    children: [
                       Text(
                         "Environment / Facilities",
                         style: TextStyle(
@@ -289,8 +289,8 @@ class _FigmaEightScreenState extends State<FigmaEightScreen> {
                   ),
                 ),
                 const SizedBox(height: 20),
-                Row(
-                  children: const [
+                const Row(
+                  children: [
                     Environment(
                       name: "Parking Lot",
                     ),
@@ -303,8 +303,8 @@ class _FigmaEightScreenState extends State<FigmaEightScreen> {
                   ],
                 ),
                 const SizedBox(height: 20),
-                Row(
-                  children: const [
+                const Row(
+                  children: [
                     Facilities(
                       name: "Garden",
                       color: Color(0xFFF5F4F8),
@@ -326,8 +326,8 @@ class _FigmaEightScreenState extends State<FigmaEightScreen> {
                   ],
                 ),
                 const SizedBox(height: 20),
-                Row(
-                  children: const [
+                const Row(
+                  children: [
                     Environments(
                       name: "Home theatre",
                     ),
@@ -339,7 +339,7 @@ class _FigmaEightScreenState extends State<FigmaEightScreen> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Row(

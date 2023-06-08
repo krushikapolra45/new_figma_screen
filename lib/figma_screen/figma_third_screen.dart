@@ -190,8 +190,8 @@ class _FigmaThirdScreenState extends State<FigmaThirdScreen> {
                 ),
               ),
               const SizedBox(height: 20),
-              Row(
-                children: const [
+              const Row(
+                children: [
                   Expanded(
                     child: Divider(
                       thickness: 1,

@@ -160,9 +160,16 @@ class _FigmaTenthScreenState extends State<FigmaTenthScreen> {
                       width: 2,
                     ),
                   ),
-                  suffixText: "What are you looking for?",
-
-                  // suffixIcon:IconButton(icon: Icon(Icons.filter),)
+                  hintText: "What are you looking for?",
+                  hintStyle: const TextStyle(color: Color(0xFFEEEEEE), fontWeight: FontWeight.bold),
+                  suffixIcon: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Image.asset(
+                      "assets/images_ten/filter.png",
+                      height: 20,
+                      width: 20,
+                    ),
+                  ),
                 ),
               ),
               const SizedBox(
@@ -268,11 +275,7 @@ class _FigmaTenthScreenState extends State<FigmaTenthScreen> {
                                             fontWeight: FontWeight.w400,
                                           ),
                                         ),
-                                        Icon(Icons.star,
-                                            color: Color(
-                                              0xFFF2C94C,
-                                            ),
-                                            size: 15),
+                                        Icon(Icons.star, color: Color(0xFFF2C94C), size: 15),
                                       ],
                                     ),
                                   ],
