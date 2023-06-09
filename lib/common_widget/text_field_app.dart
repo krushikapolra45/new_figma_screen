@@ -4,8 +4,9 @@ class TextFieldApp extends StatelessWidget {
   final TextEditingController? controller;
   final String? hintText;
   final String? lableText;
+  final String? image;
 
-  const TextFieldApp({Key? key, this.hintText, this.lableText, this.controller}) : super(key: key);
+  const TextFieldApp({Key? key, this.hintText, this.lableText, this.controller, this.image}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
