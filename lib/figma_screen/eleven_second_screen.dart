@@ -22,6 +22,12 @@ class _ElevenSecondScreenState extends State<ElevenSecondScreen> {
           SafeArea(
             child: Column(
               children: [
+                IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: Icon(Icons.navigate_before_rounded),
+                ),
                 const Align(
                   alignment: Alignment.center,
                   child: Text(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../common_widget/text_field_app.dart';
+import 'eleven_second_screen.dart';
 
 class FigmaElevenScreen extends StatefulWidget {
   const FigmaElevenScreen({
@@ -83,30 +84,39 @@ class _FigmaElevenScreenState extends State<FigmaElevenScreen> {
                       const SizedBox(
                         height: 30,
                       ),
-                      Container(
-                        height: 59,
-                        width: 350,
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFFF5165),
-                          borderRadius: BorderRadius.circular(12),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Color(0x40000000),
-                              offset: Offset(0, 4),
-                              blurRadius: 4,
-                              spreadRadius: 0,
-                            ),
-                          ],
-                        ),
-                        child: const Padding(
-                          padding: EdgeInsets.only(top: 18),
-                          child: Text(
-                            textAlign: TextAlign.center,
-                            "Login",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w700,
-                              color: Color(0xFFFFFFFF),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ElevenSecondScreen(),
+                              ));
+                        },
+                        child: Container(
+                          height: 59,
+                          width: 350,
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFFF5165),
+                            borderRadius: BorderRadius.circular(12),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Color(0x40000000),
+                                offset: Offset(0, 4),
+                                blurRadius: 4,
+                                spreadRadius: 0,
+                              ),
+                            ],
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.only(top: 18),
+                            child: Text(
+                              textAlign: TextAlign.center,
+                              "Login",
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w700,
+                                color: Color(0xFFFFFFFF),
+                              ),
                             ),
                           ),
                         ),
