@@ -47,15 +47,6 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
       "texttwo": "50",
       "name": "Filtrer",
     },
-    {
-      "color": Colors.black,
-      "itemname": "Capuche Hylienne",
-      "image": "assets/images_twelve/yellow.png",
-      "icon": Icons.favorite_border,
-      "textone": "25",
-      "texttwo": "50",
-      "name": "Filtrer",
-    },
     // {
     //   "color": Colors.black,
     //   "itemname": "Capuche Hylienne",
@@ -65,72 +56,90 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
     //   "texttwo": "50",
     //   "name": "Filtrer",
     // },
-    {
-      "color": Colors.black,
-      "itemname": "Souliers d'escalade",
-      "image": "assets/images_twelve/pink.png",
-      "icon": Icons.favorite_border,
-      "textone": "200",
-      "texttwo": "100",
-      "name": "Filtrer",
-    },
+    // {
+    //   "color": Colors.black,
+    //   "itemname": "Souliers d'escalade",
+    //   "image": "assets/images_twelve/pink.png",
+    //   "icon": Icons.favorite_border,
+    //   "textone": "200",
+    //   "texttwo": "100",
+    //   "name": "Filtrer",
+    // },
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.grey,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20),
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  const Spacer(),
-                  Image.asset(
-                    "assets/images_twelve/Account.png",
-                    height: 40,
-                  ),
-                ],
-              ),
-              const Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  "ZELDALANDO",
-                  style: TextStyle(
-                    fontFamily: "Hylia Serif Beta",
-                    color: Colors.white,
-                    fontWeight: FontWeight.w400,
-                    fontSize: 32,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    const Spacer(),
+                    Image.asset(
+                      "assets/images_twelve/Account.png",
+                      height: 40,
+                    ),
+                  ],
+                ),
+                const Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "ZELDALANDO",
+                    style: TextStyle(
+                      fontFamily: "Hylia Serif Beta",
+                      color: Colors.white,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 32,
+                    ),
                   ),
                 ),
-              ),
-              const Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  "Ces articles pourraient vous guider dans votre quête !",
-                  style: TextStyle(
-                    fontSize: 13,
-                    fontFamily: "Inter",
-                    color: Colors.white,
+                const Align(
+                  alignment: Alignment.topLeft,
+                  child: Text(
+                    "Ces articles pourraient vous guider dans votre quête !",
+                    style: TextStyle(
+                      fontSize: 13,
+                      fontFamily: "Inter",
+                      color: Colors.white,
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      TwelveZeldalando(
-                         name: ,
-                      )
-                    ],
-                  )),
-              const SizedBox(height: 20),
-              Expanded(
-                child: GridView.builder(
+                const SizedBox(
+                  height: 10,
+                ),
+                const Row(
+                  children: [
+                    TwelveZeldalando(
+                      name: "Filtrer",
+                    ),
+                    TwelveZeldalando(
+                      name: "Capuche",
+                    ),
+                    TwelveZeldalando(
+                      name: "Tuniques",
+                    ),
+                    TwelveZeldalando(
+                      name: "Masques",
+                    ),
+                    TwelveZeldalando(
+                      name: "Bas",
+                    ),
+                    TwelveZeldalando(
+                      name: "Haut",
+                    ),
+                    TwelveZeldalando(
+                      name: "Accessoires",
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                GridView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
                   itemCount: listCount.length,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
@@ -160,12 +169,15 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                                 listCount[index]["image"],
                               ),
                             ),
-                            Align(
-                              alignment: Alignment.topRight,
-                              child: Icon(
-                                listCount[index]["icon"],
-                                size: 35,
-                                color: Colors.white,
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Align(
+                                alignment: Alignment.topRight,
+                                child: Icon(
+                                  listCount[index]["icon"],
+                                  size: 35,
+                                  color: Colors.white,
+                                ),
                               ),
                             ),
                           ],
@@ -182,6 +194,9 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                           fontSize: 17,
                           fontWeight: FontWeight.bold,
                         ),
+                      ),
+                      SizedBox(
+                        height: 5,
                       ),
                       Row(
                         children: [
@@ -249,8 +264,48 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                     ],
                   ),
                 ),
-              ),
-            ],
+                const SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  height: 234,
+                  width: 364,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    gradient: const LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Color(0xFF000000),
+                        Color(0x80000000),
+                      ],
+                    ),
+                  ),
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(30),
+                        child: Image.asset(
+                          "assets/images_twelve/blue.png",
+                        ),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Align(
+                          alignment: Alignment.topRight,
+                          child: Icon(
+                            Icons.favorite_border,
+                            size: 35,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

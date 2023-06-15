@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 
 class TwelveZeldalando extends StatelessWidget {
   final String? name;
-  const TwelveZeldalando({Key? key, this.name}) : super(key: key);
+  final String? images;
+  const TwelveZeldalando({Key? key, this.name, this.images}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.black,
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(5),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.black,
+          borderRadius: BorderRadius.circular(8),
+        ),
         child: Container(
           padding: const EdgeInsets.symmetric(
             horizontal: 20,
@@ -26,7 +27,7 @@ class TwelveZeldalando extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
           ),
           child: Padding(
-            padding: const EdgeInsets.only(top: 12),
+            padding: const EdgeInsets.all(10),
             child: Text(
               name ?? "",
               style: const TextStyle(
