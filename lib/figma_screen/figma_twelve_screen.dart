@@ -471,13 +471,25 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                                   ),
                                   color: Colors.black,
                                 ),
-                                child: Text(
-                                  listCount[index]["textone"],
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500,
-                                  ),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      listCount[index]["textone"],
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Image.asset(
+                                      "assets/images_twelve/Rupee Types.png",
+                                      height: 10,
+                                      width: 7,
+                                    ),
+                                  ],
                                 ),
                               ),
                             ),
