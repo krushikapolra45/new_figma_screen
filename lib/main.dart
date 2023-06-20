@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:new_figma_screen/figma_screen/button_screen.dart';
+
+import 'figma_screen/button_screen.dart';
 
 void main() {
   runApp(const MyApp());

@@ -10,7 +10,15 @@ class ButtonScreen extends StatefulWidget {
 
 class _ButtonScreenState extends State<ButtonScreen> {
   bool swichvalue = false;
-  bool checkvalue=false;
+  bool checkvalue = false;
+  int? radiobutton = 1;
+
+  List<Map<String, dynamic>> sectionList = [
+    {
+      "index": 1,
+      "text": "one",
+    }
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,17 +108,42 @@ class _ButtonScreenState extends State<ButtonScreen> {
                 },
               ),
               CupertinoButton(
-                  child: Text(
+                  child: const Text(
                     "cupertino",
                     style: TextStyle(fontSize: 30),
                   ),
                   onPressed: () {}),
-    //          Checkbox(value: checkvalue, onChanged: (value) {
-    // debugPrint("value---->$value");
-    // setState(() {
-    //     checkvalue=value! });
-    //
-    //         ],
+              Checkbox(
+                value: checkvalue,
+                onChanged: (value) {
+                  debugPrint("value---> $value");
+                  setState(() {
+                    checkvalue = value!;
+                  });
+                },
+              ),
+              Radio(
+                value: 1,
+                groupValue: radiobutton,
+                onChanged: (value) {
+                  radiobutton = value;
+                  debugPrint("value--->$value");
+                  setState(() {});
+                },
+              ),
+              Radio(
+                value: 2,
+                groupValue: radiobutton,
+                onChanged: (value) {
+                  radiobutton = value;
+                  debugPrint("value--->$value");
+                  setState(() {});
+                },
+              ),
+              Column(
+                children: [],
+              ),
+            ],
           ),
         ),
       ),

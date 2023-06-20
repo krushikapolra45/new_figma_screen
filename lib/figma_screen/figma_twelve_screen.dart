@@ -15,7 +15,6 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
       "color": Colors.black,
       "itemname": "Tunique du Prodige",
       "image": "assets/images_twelve/bluecloth.png",
-      "icon": Icons.favorite_border,
       "textone": "25",
       "texttwo": "25",
       "name": "Filtrer",
@@ -24,7 +23,6 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
       "color": Colors.black,
       "itemname": "Capuche de Lavio",
       "image": "assets/images_twelve/TENUE.png",
-      "icon": Icons.favorite_border,
       "textone": "150",
       "texttwo": "90",
       "name": "Capuche",
@@ -33,7 +31,6 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
       "color": Colors.black,
       "itemname": "Masque de Korogu",
       "image": "assets/images_twelve/greenlef.png",
-      "icon": Icons.favorite_border,
       "textone": "350",
       "texttwo": "10",
       "name": "Tuniques",
@@ -42,16 +39,16 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
       "color": Colors.black,
       "itemname": "Tunique du Temps",
       "image": "assets/images_twelve/greencloth.png",
-      "icon": Icons.favorite_border,
       "textone": "500",
       "texttwo": "50",
       "name": "Filtrer",
     },
+  ];
+  List<Map<String, dynamic>> listTwo = [
     {
       "color": Colors.black,
       "itemname": "Casque zora",
       "image": "assets/images_twelve/yellow.png",
-      "icon": Icons.favorite_border,
       "textone": "25",
       "texttwo": "50",
       "name": "Filtrer",
@@ -60,7 +57,6 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
       "color": Colors.black,
       "itemname": "Souliers d'escalade",
       "image": "assets/images_twelve/pink.png",
-      "icon": Icons.favorite_border,
       "textone": "200",
       "texttwo": "100",
       "name": "Filtrer",
@@ -172,12 +168,12 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                                 listCount[index]["image"],
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
+                            const Padding(
+                              padding: EdgeInsets.all(8.0),
                               child: Align(
                                 alignment: Alignment.topRight,
                                 child: Icon(
-                                  listCount[index]["icon"],
+                                  Icons.favorite_border,
                                   size: 35,
                                   color: Colors.white,
                                 ),
@@ -420,15 +416,15 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Image.asset(
-                                listCount[index]["image"],
+                                listTwo[index]["image"],
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
+                            const Padding(
+                              padding: EdgeInsets.all(8.0),
                               child: Align(
                                 alignment: Alignment.topRight,
                                 child: Icon(
-                                  listCount[index]["icon"],
+                                  Icons.favorite_border,
                                   size: 35,
                                   color: Colors.white,
                                 ),
@@ -441,7 +437,7 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                         height: 10,
                       ),
                       Text(
-                        listCount[index]["itemname"],
+                        listTwo[index]["itemname"],
                         style: const TextStyle(
                           color: Colors.white,
                           fontFamily: "Inter",
@@ -474,21 +470,21 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                                 child: Row(
                                   children: [
                                     Text(
-                                      listCount[index]["textone"],
+                                      listTwo[index]["textone"],
                                       style: const TextStyle(
                                         color: Colors.white,
                                         fontSize: 16,
                                         fontWeight: FontWeight.w500,
                                       ),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 5,
                                     ),
-                                    Image.asset(
-                                      "assets/images_twelve/Rupee Types.png",
-                                      height: 10,
-                                      width: 7,
-                                    ),
+                                    // Image.asset(
+                                    //   "assets/images_twelve/Rupee Types.png",
+                                    //   height: 10,
+                                    //   width: 7,
+                                    // ),
                                   ],
                                 ),
                               ),
@@ -515,7 +511,7 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                                   color: Colors.black,
                                 ),
                                 child: Text(
-                                  listCount[index]["texttwo"],
+                                  listTwo[index]["texttwo"],
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 16,
