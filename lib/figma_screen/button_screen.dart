@@ -12,12 +12,13 @@ class _ButtonScreenState extends State<ButtonScreen> {
   bool swichvalue = false;
   bool checkvalue = false;
   int? radiobutton = 1;
+  int dropdownButten = 1;
 
   List<Map<String, dynamic>> sectionList = [
-    {
-      "index": 1,
-      "text": "one",
-    }
+    {"index": 1, "text": "one"},
+    {"index": 2, "text": "two"},
+    {"index": 3, "text": "three"},
+    {"index": 4, "text": "four"},
   ];
   @override
   Widget build(BuildContext context) {
@@ -140,8 +141,22 @@ class _ButtonScreenState extends State<ButtonScreen> {
                   setState(() {});
                 },
               ),
-              Column(
-                children: [],
+              DropdownButton(
+                value: dropdownButten,
+                onChanged: (value) {
+                  setState(() {
+                    dropdownButten = value!;
+                  });
+                },
+                items: sectionList
+                    .map(
+                      (data) => DropdownMenuItem(
+                        onTap: () {},
+                        value: int.parse(data["index"].toString()),
+                        child: Text(data["text"]),
+                      ),
+                    )
+                    .toList(),
               ),
             ],
           ),
