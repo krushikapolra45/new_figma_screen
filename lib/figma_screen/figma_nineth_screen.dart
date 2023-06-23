@@ -91,7 +91,12 @@ class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
                     ),
                     const Text(
                       "Evolve",
-                      style: TextStyle(fontSize: 20, color: Color(0xFF101828), fontWeight: FontWeight.bold, fontFamily: "Inter"),
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Color(0xFF101828),
+                        fontWeight: FontWeight.bold,
+                        fontFamily: "Inter",
+                      ),
                     ),
                     const Spacer(),
                     Image.asset(

@@ -12,7 +12,6 @@ class FigmaTwelveScreen extends StatefulWidget {
 class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
   List<Map<String, dynamic>> listCount = [
     {
-      "color": Colors.black,
       "itemname": "Tunique du Prodige",
       "image": "assets/images_twelve/bluecloth.png",
       "textone": "25",
@@ -20,7 +19,6 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
       "name": "Filtrer",
     },
     {
-      "color": Colors.black,
       "itemname": "Capuche de Lavio",
       "image": "assets/images_twelve/TENUE.png",
       "textone": "150",
@@ -28,7 +26,6 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
       "name": "Capuche",
     },
     {
-      "color": Colors.black,
       "itemname": "Masque de Korogu",
       "image": "assets/images_twelve/greenlef.png",
       "textone": "350",
@@ -36,7 +33,6 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
       "name": "Tuniques",
     },
     {
-      "color": Colors.black,
       "itemname": "Tunique du Temps",
       "image": "assets/images_twelve/greencloth.png",
       "textone": "500",
@@ -46,7 +42,6 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
   ];
   List<Map<String, dynamic>> listTwo = [
     {
-      "color": Colors.black,
       "itemname": "Casque zora",
       "image": "assets/images_twelve/yellow.png",
       "textone": "25",
@@ -54,7 +49,6 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
       "name": "Filtrer",
     },
     {
-      "color": Colors.black,
       "itemname": "Souliers d'escalade",
       "image": "assets/images_twelve/pink.png",
       "textone": "200",
