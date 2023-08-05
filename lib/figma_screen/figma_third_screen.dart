@@ -265,23 +265,20 @@ class _FigmaThirdScreenState extends State<FigmaThirdScreen> {
                 children: [
                   RichText(
                     text: const TextSpan(
+                      text: ("Allready  have an account ?"),
                       style: TextStyle(
                         fontSize: 18,
                         color: Color(0x80000000),
                       ),
-                      children: [
-                        TextSpan(
-                          text: ("Allready  have an account ?"),
-                        ),
-                        TextSpan(
-                          text: ("log in"),
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Color(0xff000000),
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
+                    ),
+                  ),
+                  RichText(
+                    text: const TextSpan(
+                      text: ("log in"),
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Color(0xFF000000),
+                      ),
                     ),
                   ),
                 ],

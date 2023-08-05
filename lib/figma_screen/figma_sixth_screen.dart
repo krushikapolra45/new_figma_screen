@@ -27,7 +27,6 @@ class _FigmaSixScreenState extends State<FigmaSixScreen> {
                   ),
                   child: const TabBar(
                     indicatorSize: TabBarIndicatorSize.tab,
-                    unselectedLabelColor: Colors.blue,
                     splashBorderRadius: BorderRadius.all(
                       Radius.circular(10),
                     ),
@@ -63,7 +62,6 @@ class _FigmaSixScreenState extends State<FigmaSixScreen> {
                   height: 120,
                   width: 420,
                   decoration: BoxDecoration(
-                    color: Colors.blue,
                     borderRadius: BorderRadius.circular(20),
                     gradient: const LinearGradient(
                       colors: [
@@ -87,9 +85,9 @@ class _FigmaSixScreenState extends State<FigmaSixScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Column(
+                        const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
+                          children: [
                             Text(
                               "Create a plan ",
                               style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
@@ -216,8 +214,8 @@ class _FigmaSixScreenState extends State<FigmaSixScreen> {
                     borderRadius: BorderRadius.circular(10),
                     color: const Color(0xFFEBEBF0),
                   ),
-                  child: Row(
-                    children: const [
+                  child: const Row(
+                    children: [
                       SizedBox(
                         width: 30,
                       ),
@@ -246,9 +244,9 @@ class _FigmaSixScreenState extends State<FigmaSixScreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
                       children: [
-                        Row(
+                        const Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
+                          children: [
                             Text(
                               "Monday, 3 June",
                               style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
@@ -340,13 +338,13 @@ class _FigmaSixScreenState extends State<FigmaSixScreen> {
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(width: 2, color: Colors.black12),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12),
+                  child: const Padding(
+                    padding: EdgeInsets.all(12),
                     child: Column(
                       children: [
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
+                          children: [
                             Text(
                               "Tuesday, 4 June",
                               style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
@@ -373,13 +371,13 @@ class _FigmaSixScreenState extends State<FigmaSixScreen> {
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(width: 2, color: Colors.black12),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12),
+                  child: const Padding(
+                    padding: EdgeInsets.all(12),
                     child: Column(
                       children: [
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
+                          children: [
                             Text(
                               "Wednesday, 5 June",
                               style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),

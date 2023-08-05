@@ -86,8 +86,8 @@ class _FigmeFirstScreenState extends State<FigmeFirstScreen> {
                     image: AssetImage("assets/images/typcn_location-arrow.png"),
                     height: 24,
                   ),
-                  Column(
-                    children: const [
+                  const Column(
+                    children: [
                       Text("300"),
                       Text("Est-5 min"),
                     ],
@@ -159,8 +159,8 @@ class _FigmeFirstScreenState extends State<FigmeFirstScreen> {
               ),
             ),
             const SizedBox(height: 10),
-            Row(
-              children: const [
+            const Row(
+              children: [
                 Text(
                   "Another services",
                   textAlign: TextAlign.center,

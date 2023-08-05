@@ -57,13 +57,16 @@ class _FigmaSecondScreenState extends State<FigmaSecondScreen> {
                       Text(
                         "date",
                         textAlign: TextAlign.start,
-                        style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20, color: Color(0xff61707f)),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 20,
+                            color: Color(
+                              0xff61707f,
+                            )),
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 10,
-                  ),
+                  const SizedBox(height: 10),
                   Row(
                     children: [
                       Image.asset(
@@ -239,7 +242,7 @@ class _FigmaSecondScreenState extends State<FigmaSecondScreen> {
                     ),
                   ),
                   const SizedBox(
-                    height: 10,
+                    height: 10
                   ),
                   Container(
                     decoration: BoxDecoration(
@@ -310,7 +313,7 @@ class _FigmaSecondScreenState extends State<FigmaSecondScreen> {
                     ),
                   ),
                   const SizedBox(
-                    height: 10,
+                    height: 10
                   ),
                   Container(
                     decoration: BoxDecoration(

@@ -42,9 +42,7 @@ class _FigmaEightScreenState extends State<FigmaEightScreen> {
                         size: 15,
                       ),
                     ),
-                    const SizedBox(
-                      width: 70,
-                    ),
+                    const SizedBox(width: 70),
                     const Text(
                       "Add Listing",
                       style: TextStyle(
@@ -54,9 +52,7 @@ class _FigmaEightScreenState extends State<FigmaEightScreen> {
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.only(left: 25),
                   child: Row(
@@ -71,9 +67,7 @@ class _FigmaEightScreenState extends State<FigmaEightScreen> {
                           ),
                         ),
                       ),
-                      const SizedBox(
-                        width: 5,
-                      ),
+                      const SizedBox(width: 5),
                       RichText(
                         text: const TextSpan(
                           text: "complete",
@@ -116,9 +110,7 @@ class _FigmaEightScreenState extends State<FigmaEightScreen> {
                         color: Color(0xFF234F68),
                       ),
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
+                    SizedBox(height: 10),
                     Price(
                       name: "\$ 180,000",
                     ),
@@ -131,9 +123,7 @@ class _FigmaEightScreenState extends State<FigmaEightScreen> {
                         color: Color(0xFF234F68),
                       ),
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
+                    SizedBox(height: 10),
                     Price(
                       name: "\$ 315/month",
                     ),

@@ -87,10 +87,11 @@ class _FigmaElevenScreenState extends State<FigmaElevenScreen> {
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => ElevenSecondScreen(),
-                              ));
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const ElevenSecondScreen(),
+                            ),
+                          );
                         },
                         child: Container(
                           height: 59,

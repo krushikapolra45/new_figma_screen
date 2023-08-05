@@ -69,9 +69,7 @@ class _FigmaSevenScreenState extends State<FigmaSevenScreen> {
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 15,
-              ),
+              const SizedBox(height: 15),
               Row(
                 children: [
                   Container(
@@ -93,9 +91,7 @@ class _FigmaSevenScreenState extends State<FigmaSevenScreen> {
                       ],
                     ),
                   ),
-                  const SizedBox(
-                    width: 15,
-                  ),
+                  const SizedBox(width: 15),
                   Container(
                     height: 52,
                     width: 52,
@@ -113,75 +109,70 @@ class _FigmaSevenScreenState extends State<FigmaSevenScreen> {
               ),
               Row(
                 children: [
-                  Container(
-                    width: 380,
-                    height: 208,
-                    child: Stack(
-                      children: [
-                        Image.asset(
-                          "assets/images_seven/spices_one.png",
-                          width: double.infinity,
-                          fit: BoxFit.cover,
-                        ),
-                        const Row(
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(left: 8, bottom: 8),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "Get your first order at",
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: Color(0xFFFFFFFF),
-                                    ),
+                  Stack(
+                    children: [
+                      Image.asset(
+                        "assets/images_seven/spices_one.png",
+                        width: 380,
+                        height: 208,
+                        fit: BoxFit.cover,
+                      ),
+                      const Row(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(left: 8, bottom: 8),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Get your first order at",
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Color(0xFFFFFFFF),
                                   ),
-                                  Text(
-                                    " 60% off ",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 15,
-                                      color: Color(0xFFFF9D01),
-                                    ),
+                                ),
+                                Text(
+                                  "60% off",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15,
+                                    color: Color(0xFFFF9D01),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 5),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                crossAxisAlignment: CrossAxisAlignment.end,
-                                children: [
-                                  Text(
-                                    "Dive in now.",
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      color: Color(0xFFFF9D01),
-                                    ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 5),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Text(
+                                  "Dive in now.",
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: Color(0xFFFF9D01),
                                   ),
-                                  Text(
-                                    "*Only available for new foodies.",
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      color: Color(0xFFFFFFFF),
-                                    ),
+                                ),
+                                Text(
+                                  "*Only available for new foodies.",
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: Color(0xFFFFFFFF),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                      ],
-                    ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 30,
-              ),
+              const SizedBox(height: 30),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -370,9 +361,7 @@ class _FigmaSevenScreenState extends State<FigmaSevenScreen> {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 30,
-              ),
+              const SizedBox(height: 30),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -406,9 +395,7 @@ class _FigmaSevenScreenState extends State<FigmaSevenScreen> {
                     price: "₹ 100",
                     time: "15 mins | 1 km",
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
+                  SizedBox(height: 20),
                   FoodPizza(
                     image: "assets/images_seven/pizza2.png",
                     foodimage: "assets/images_seven/India_vegetarian.png",

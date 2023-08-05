@@ -27,7 +27,7 @@ class _FigmaFiveScreenState extends State<FigmaFiveScreen> {
                   Container(
                     height: 40,
                     width: 330,
-                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
                     decoration: BoxDecoration(
                       color: const Color(0xFFF0F2FF),
                       border: Border.all(
@@ -53,7 +53,7 @@ class _FigmaFiveScreenState extends State<FigmaFiveScreen> {
                             fontSize: 18,
                           ),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Image.asset(
                           "assets/images_five/Filter.png",
                           color: const Color(0xFF4353FF),
@@ -67,9 +67,9 @@ class _FigmaFiveScreenState extends State<FigmaFiveScreen> {
               const SizedBox(
                 height: 30,
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
+                children: [
                   Text(
                     "collections",
                     style: TextStyle(
@@ -86,11 +86,11 @@ class _FigmaFiveScreenState extends State<FigmaFiveScreen> {
                   ),
                 ],
               ),
-              Row(
-                children: const [
+              const Row(
+                children: [
                   Expanded(
                     child: Divider(
-                      thickness: 1,
+                      thickness: 3,
                       indent: 0,
                       color: Color(0xFF4353FF),
                     ),
@@ -130,9 +130,7 @@ class _FigmaFiveScreenState extends State<FigmaFiveScreen> {
                               width: 158,
                               height: 90,
                             ),
-                            const SizedBox(
-                              height: 37,
-                            ),
+                            const SizedBox(height: 37),
                             const Text(
                               "3d zombieya",
                               style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
@@ -150,9 +148,7 @@ class _FigmaFiveScreenState extends State<FigmaFiveScreen> {
                       ],
                     ),
                   ),
-                  const SizedBox(
-                    width: 20,
-                  ),
+                  const SizedBox(width: 20),
                   Container(
                     height: 181,
                     width: 158,

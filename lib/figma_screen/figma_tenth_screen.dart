@@ -6,7 +6,6 @@ class FigmaTenthScreen extends StatefulWidget {
     Key? key,
     this.textcontroller,
   }) : super(key: key);
-
   @override
   State<FigmaTenthScreen> createState() => _FigmaTenthScreenState();
 }
@@ -141,9 +140,7 @@ class _FigmaTenthScreenState extends State<FigmaTenthScreen> {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              const SizedBox(
-                height: 20,
-              ),
+              const SizedBox(height: 20),
               TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(

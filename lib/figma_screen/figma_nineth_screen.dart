@@ -86,9 +86,7 @@ class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
                       height: 44,
                       width: 44,
                     ),
-                    const SizedBox(
-                      width: 20,
-                    ),
+                    const SizedBox(width: 20),
                     const Text(
                       "Evolve",
                       style: TextStyle(
@@ -108,9 +106,7 @@ class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 20),
             const Text(
               textAlign: TextAlign.center,
               "Success Stories",
@@ -140,9 +136,7 @@ class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
                           height: 148,
                         ),
                       ),
-                      const SizedBox(
-                        height: 15,
-                      ),
+                      const SizedBox(height: 15),
                       Text(
                         colortextList[index]["title"],
                         style: const TextStyle(
