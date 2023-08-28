@@ -25,7 +25,7 @@ class _FigmaSixScreenState extends State<FigmaSixScreen> {
                     color: const Color(0x1F767680),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: const TabBar(
+                  child: TabBar(
                     indicatorSize: TabBarIndicatorSize.tab,
                     splashBorderRadius: BorderRadius.all(
                       Radius.circular(10),

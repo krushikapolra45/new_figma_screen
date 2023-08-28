@@ -8,12 +8,6 @@ class FigmaNinethScreen extends StatefulWidget {
 }
 
 class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
-  Map mapdata = {
-    "color": Colors.white,
-    "title": "",
-    "date": "",
-  };
-
   List<Map<String, dynamic>> colortextList = [
     {
       "color": Colors.white,

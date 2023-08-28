@@ -176,9 +176,7 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                           ],
                         ),
                       ),
-                      const SizedBox(
-                        height: 10,
-                      ),
+                      const SizedBox(height: 10),
                       Text(
                         listCount[index]["itemname"],
                         style: const TextStyle(
@@ -188,9 +186,7 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const SizedBox(
-                        height: 5,
-                      ),
+                      const SizedBox(height: 5),
                       Row(
                         children: [
                           Container(
@@ -474,11 +470,6 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                                     const SizedBox(
                                       width: 5,
                                     ),
-                                    // Image.asset(
-                                    //   "assets/images_twelve/Rupee Types.png",
-                                    //   height: 10,
-                                    //   width: 7,
-                                    // ),
                                   ],
                                 ),
                               ),
