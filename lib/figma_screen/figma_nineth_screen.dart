@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:new_figma_screen/data/dummy_data.dart';
+import 'package:new_figma_screen/model/to_do_model.dart';
 
 class FigmaNinethScreen extends StatefulWidget {
   const FigmaNinethScreen({Key? key}) : super(key: key);
@@ -8,56 +10,13 @@ class FigmaNinethScreen extends StatefulWidget {
 }
 
 class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
-  List<Map<String, dynamic>> colortextList = [
-    {
-      "color": Colors.white,
-      "title": "National Statistics Center Obtain a certificate of ISO 9001 and \n certificate of ISO 10015.",
-      "image": "assets/images_nine/images_first.png",
-      "date": "january 2022",
-    },
-    {
-      "color": Colors.white,
-      "title": "National Statistics Center Obtain a certificate of ISO 9001 and \ncertificate of ISO 10015.",
-      "image": "assets/images_nine/Image_two.png",
-      "date": "October 2022",
-    },
-    {
-      "color": Colors.white,
-      "title": "Institutional development in the Ministry of education and higher education.",
-      "image": "assets/images_nine/Image_three.png",
-      "date": "september 2022",
-    },
-    {
-      "color": Colors.white,
-      "title": "Completion of Strategic Development Planning Project                \n               Egypt - Cairo.",
-      "image": "assets/images_nine/Image_four.png",
-      "date": "may 2022",
-    },
-    {
-      "color": Colors.white,
-      "title": "Completion of Strategic Development Planning and\n Physical Planning for Ithad Municipality",
-      "image": "assets/images_nine/Image_five.png",
-      "date": "April 2022",
-    },
-    {
-      "color": Colors.white,
-      "title": "Institutional development in the Ministry of\n education and higher education.",
-      "image": "assets/images_nine/Image_six.png",
-      "date": "january 2022",
-    },
-    {
-      "color": Colors.white,
-      "title": "Service Decentralization at the Ministry of National Economy   \n   Alexandria - Egypt.",
-      "image": "assets/images_nine/Image_seven.png",
-      "date": "December 2021",
-    },
-    {
-      "color": Colors.white,
-      "title": "Analysis of security vulnerabilities in computerized system in \nthe financial market.",
-      "image": "assets/images_nine/Image_eight.png",
-      "date": "November 2021",
-    },
-  ];
+  List<ToDoModel> toDoModelList = [];
+  @override
+  void initState() {
+    // TODO: implement initState
+    toDoModelList = dataList.map((value) => ToDoModel.fromJson(value)).toList();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -106,44 +65,44 @@ class _FigmaNinethScreenState extends State<FigmaNinethScreen> {
               "Success Stories",
               style: TextStyle(fontSize: 28, fontFamily: "Inter"),
             ),
-            const SizedBox(
+            SizedBox(
               height: 10,
             ),
             ListView.separated(
-              physics: const NeverScrollableScrollPhysics(),
+              physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,
-              itemCount: colortextList.length,
+              itemCount: dataList.length,
               itemBuilder: (context, index) => Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20),
+                padding: EdgeInsets.only(left: 20, right: 20),
                 child: Container(
                   width: 343,
                   height: 260,
-                  color: colortextList[index]["color"],
+                  color: Colors.white,
                   alignment: Alignment.topCenter,
                   child: Column(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(top: 10),
+                        padding: EdgeInsets.only(top: 10),
                         child: Image.asset(
-                          colortextList[index]["image"],
+                          toDoModelList[index].image!,
                           width: 319,
                           height: 148,
                         ),
                       ),
-                      const SizedBox(height: 15),
+                      SizedBox(height: 15),
                       Text(
-                        colortextList[index]["title"],
-                        style: const TextStyle(
+                        toDoModelList[index].title!,
+                        style: TextStyle(
                           fontSize: 10,
                           fontFamily: "Inter",
                         ),
                         textAlign: TextAlign.center,
                       ),
-                      const SizedBox(
+                      SizedBox(
                         height: 20,
                       ),
                       Text(
-                        colortextList[index]["date"],
+                        toDoModelList[index].date!,
                         style: const TextStyle(
                           fontSize: 15,
                           fontFamily: "Inter",

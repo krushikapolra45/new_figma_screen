@@ -1,90 +1,24 @@
 import 'package:flutter/material.dart';
 
+import '../data/dummy_data_ten.dart';
+import '../model/to_do_model_ten.dart';
+
 class FigmaTenthScreen extends StatefulWidget {
   final TextEditingController? textcontroller;
-  const FigmaTenthScreen({
-    Key? key,
-    this.textcontroller,
-  }) : super(key: key);
+  const FigmaTenthScreen({Key? key, this.textcontroller}) : super(key: key);
   @override
   State<FigmaTenthScreen> createState() => _FigmaTenthScreenState();
 }
 
 class _FigmaTenthScreenState extends State<FigmaTenthScreen> {
-  List<Map<String, dynamic>> arrayList = [
-    {
-      "color": const Color(0xFFF4F5F7),
-      "itemname": "M1 Macbook Pro\n2020",
-      "image": "assets/images_ten/image main_leptop.png",
-      "icon": Icons.favorite,
-      "price": "USD 1,199.00",
-    },
-    {
-      "color": const Color(0xFFF4F5F7),
-      "itemname": "Sanchos Office\nDesk..",
-      "image": "assets/images_ten/woodtable.png",
-      "icon": Icons.shopping_cart,
-      "price": "USD 71.12",
-    },
-    {
-      "color": const Color(0xFFF4F5F7),
-      "itemname": "Puton Coffee\nMaker, Auto ...",
-      "image": "assets/images_ten/image juicer.png",
-      "icon": Icons.shopping_cart,
-      "price": "USD 83.00",
-    },
-    {
-      "color": const Color(0xFFF4F5F7),
-      "itemname": "Adjustable\nOffice Chair",
-      "image": "assets/images_ten/image chair.png",
-      "icon": Icons.favorite,
-      "price": "USD 64.00",
-    },
-    {
-      "color": const Color(0xFFF4F5F7),
-      "itemname": "2.4G Optical\nWireless Mouse",
-      "image": "assets/images_ten/image mouse.png",
-      "icon": Icons.favorite,
-      "price": "USD 23.00",
-    },
-    {
-      "color": const Color(0xFFF4F5F7),
-      "itemname": "Jarvis Hardwood\nStanding Desk",
-      "image": "assets/images_ten/image table.png",
-      "icon": Icons.favorite,
-      "price": "USD 1,399.00",
-    },
-    {
-      "color": const Color(0xFFF4F5F7),
-      "itemname": "Boat Airpods\n203 - Wireless",
-      "image": "assets/images_ten/image airpods.png",
-      "icon": Icons.favorite,
-      "price": "USD 79.00",
-    },
-    {
-      "color": const Color(0xFFF4F5F7),
-      "itemname": "Logitech Folio\nTouch",
-      "image": "assets/images_ten/image leptop.png",
-      "icon": Icons.favorite,
-      "price": "USD 329.00",
-    },
-    {
-      "color": const Color(0xFFF4F5F7),
-      "itemname": "Black Slot 5 Shelf\nUnit",
-      "image": "assets/images_ten/image stand.png",
-      "icon": Icons.favorite,
-      "price": "USD 61.00",
-    },
-    {
-      "color": const Color(0xFFF4F5F7),
-      "itemname": "Portable \nBluetooth Spea..",
-      "image": "assets/images_ten/image bluetooth.png",
-      "icon": Icons.favorite,
-      "price": "USD 36.99",
-    },
-  ];
-
+  List<ToDoModelTen> toDoModelData = [];
   @override
+  void initState() {
+    // TODO: implement initState
+    toDoModelData = arrayList.map((value) => ToDoModelTen.fromJson(value)).toList();
+    super.initState();
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
@@ -196,14 +130,14 @@ class _FigmaTenthScreenState extends State<FigmaTenthScreen> {
                   itemBuilder: (context, index) => Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: arrayList[index]["color"],
+                      color: Color(0xFFF4F5F7),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(10),
                       child: Stack(
                         children: [
                           Image.asset(
-                            arrayList[index]["image"],
+                            toDoModelData[index].image!,
                           ),
                           Align(
                             alignment: Alignment.topRight,
@@ -215,8 +149,8 @@ class _FigmaTenthScreenState extends State<FigmaTenthScreen> {
                                 color: Colors.white,
                               ),
                               child: Icon(
-                                arrayList[index]["icon"],
-                                color: const Color(0xFFCED55B),
+                                toDoModelData[index].icon,
+                                color: Color(0xFFCED55B),
                                 size: 18,
                               ),
                             ),
@@ -236,7 +170,7 @@ class _FigmaTenthScreenState extends State<FigmaTenthScreen> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      arrayList[index]["itemname"],
+                                      toDoModelData[index].itemname!,
                                       style: const TextStyle(
                                         color: Color(0xFF040B14),
                                         fontSize: 16,
@@ -244,14 +178,11 @@ class _FigmaTenthScreenState extends State<FigmaTenthScreen> {
                                         fontWeight: FontWeight.w400,
                                       ),
                                     ),
-                                    const SizedBox(
-                                      height: 2,
-                                    ),
                                     Text(
-                                      arrayList[index]["price"],
+                                      toDoModelData[index].price!,
                                       style: const TextStyle(
                                         color: Color(0xFFBA5C3D),
-                                        fontSize: 16,
+                                        fontSize: 12,
                                         fontFamily: "Avenir",
                                         fontWeight: FontWeight.w600,
                                       ),

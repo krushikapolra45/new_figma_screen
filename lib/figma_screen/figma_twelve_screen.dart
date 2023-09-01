@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:new_figma_screen/common_widget/twelve_zeldalando.dart';
+import 'package:new_figma_screen/data/dummy_data_twelve.dart';
+import 'package:new_figma_screen/model/to-do_model_twelve.dart';
 
 class FigmaTwelveScreen extends StatefulWidget {
   final TextEditingController? textcontroller;
@@ -10,53 +12,18 @@ class FigmaTwelveScreen extends StatefulWidget {
 }
 
 class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
-  List<Map<String, dynamic>> listCount = [
-    {
-      "itemname": "Tunique du Prodige",
-      "image": "assets/images_twelve/bluecloth.png",
-      "textone": "25",
-      "texttwo": "25",
-      "name": "Filtrer",
-    },
-    {
-      "itemname": "Capuche de Lavio",
-      "image": "assets/images_twelve/TENUE.png",
-      "textone": "150",
-      "texttwo": "90",
-      "name": "Capuche",
-    },
-    {
-      "itemname": "Masque de Korogu",
-      "image": "assets/images_twelve/greenlef.png",
-      "textone": "350",
-      "texttwo": "10",
-      "name": "Tuniques",
-    },
-    {
-      "itemname": "Tunique du Temps",
-      "image": "assets/images_twelve/greencloth.png",
-      "textone": "500",
-      "texttwo": "50",
-      "name": "Filtrer",
-    },
-  ];
-  List<Map<String, dynamic>> listTwo = [
-    {
-      "itemname": "Casque zora",
-      "image": "assets/images_twelve/yellow.png",
-      "textone": "25",
-      "texttwo": "50",
-      "name": "Filtrer",
-    },
-    {
-      "itemname": "Souliers d'escalade",
-      "image": "assets/images_twelve/pink.png",
-      "textone": "200",
-      "texttwo": "100",
-      "name": "Filtrer",
-    },
-  ];
+  List<ToDoModelTwelve> toDoModelListData = [];
+  List<ToDoModelData> toDoModelListTwo = [];
+
   @override
+  void initState() {
+    // TODO: implement initState
+    toDoModelListData = listCount.map((value) => ToDoModelTwelve.fromJson(value)).toList();
+    toDoModelListTwo = listTwo.map((value) => ToDoModelData.fromJson(value)).toList();
+
+    super.initState();
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey,
@@ -132,8 +99,8 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                 const SizedBox(height: 20),
                 GridView.builder(
                   shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: 4,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: listCount.length,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     mainAxisSpacing: 10,
@@ -157,9 +124,9 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                         child: Stack(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: EdgeInsets.all(8.0),
                               child: Image.asset(
-                                listCount[index]["image"],
+                                toDoModelListData[index].image!,
                               ),
                             ),
                             const Padding(
@@ -178,7 +145,7 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                       ),
                       const SizedBox(height: 10),
                       Text(
-                        listCount[index]["itemname"],
+                        toDoModelListData[index].itemname!,
                         style: const TextStyle(
                           color: Colors.white,
                           fontFamily: "Inter",
@@ -207,7 +174,7 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                                   color: Colors.black,
                                 ),
                                 child: Text(
-                                  listCount[index]["textone"],
+                                  toDoModelListData[index].textone!,
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 16,
@@ -238,7 +205,7 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                                   color: Colors.black,
                                 ),
                                 child: Text(
-                                  listCount[index]["texttwo"],
+                                  toDoModelListData[index].texttwo!,
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 16,
@@ -380,7 +347,7 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                 GridView.builder(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  itemCount: 2,
+                  itemCount: listTwo.length,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     mainAxisSpacing: 10,
@@ -406,7 +373,7 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Image.asset(
-                                listTwo[index]["image"],
+                                toDoModelListTwo[index].image!,
                               ),
                             ),
                             const Padding(
@@ -427,7 +394,7 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                         height: 10,
                       ),
                       Text(
-                        listTwo[index]["itemname"],
+                        toDoModelListTwo[index].itemname!,
                         style: const TextStyle(
                           color: Colors.white,
                           fontFamily: "Inter",
@@ -460,7 +427,7 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                                 child: Row(
                                   children: [
                                     Text(
-                                      listTwo[index]["textone"],
+                                      toDoModelListTwo[index].textone!,
                                       style: const TextStyle(
                                         color: Colors.white,
                                         fontSize: 16,
@@ -496,7 +463,7 @@ class _FigmaTwelveScreenState extends State<FigmaTwelveScreen> {
                                   color: Colors.black,
                                 ),
                                 child: Text(
-                                  listTwo[index]["texttwo"],
+                                  toDoModelListTwo[index].texttwo!,
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 16,
