@@ -25,7 +25,7 @@ class _FigmaSixScreenState extends State<FigmaSixScreen> {
                     color: const Color(0x1F767680),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: TabBar(
+                  child: const TabBar(
                     indicatorSize: TabBarIndicatorSize.tab,
                     splashBorderRadius: BorderRadius.all(
                       Radius.circular(10),
@@ -90,14 +90,20 @@ class _FigmaSixScreenState extends State<FigmaSixScreen> {
                           children: [
                             Text(
                               "Create a plan ",
-                              style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
+                              style: TextStyle(
+                                fontWeight: FontWeight.w700,
+                                fontSize: 20,
+                              ),
                             ),
                             SizedBox(
                               height: 10,
                             ),
                             Text(
                               "Curate groceries the way you like",
-                              style: TextStyle(fontWeight: FontWeight.w400, fontSize: 15),
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 15,
+                              ),
                             ),
                             SizedBox(
                               height: 16,
@@ -249,7 +255,10 @@ class _FigmaSixScreenState extends State<FigmaSixScreen> {
                           children: [
                             Text(
                               "Monday, 3 June",
-                              style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
+                              style: TextStyle(
+                                fontWeight: FontWeight.w700,
+                                fontSize: 20,
+                              ),
                             ),
                             SizedBox(
                               width: 130,
