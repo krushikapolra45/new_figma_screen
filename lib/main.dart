@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:new_figma_screen/figma_screen/figma_twelve_screen.dart';
+import 'package:new_figma_screen/figma_screen/figma_sixth_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const FigmaTwelveScreen(),
+      home: const FigmaSixScreen(),
     );
   }
 }
