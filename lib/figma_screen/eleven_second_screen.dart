@@ -91,12 +91,12 @@ class _ElevenSecondScreenState extends State<ElevenSecondScreen> {
                       ),
                       Container(
                         height: 59,
+                        color: const Color(0xFFFF5165),
+                        borderRadius: BorderRadius.circular(12),
+                        boxShadow: const [
+                          BoxShadow(
                         width: 350,
                         decoration: BoxDecoration(
-                          color: const Color(0xFFFF5165),
-                          borderRadius: BorderRadius.circular(12),
-                          boxShadow: const [
-                            BoxShadow(
                               color: Color(0x40000000),
                               offset: Offset(0, 4),
                               blurRadius: 24,
